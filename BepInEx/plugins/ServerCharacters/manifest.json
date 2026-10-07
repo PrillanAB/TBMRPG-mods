@@ -1,0 +1,7 @@
+{
+    "name": "ServerCharacters",
+    "version_number": "1.4.17",
+    "website_url": "https://github.com/blaxxun-boop/ServerCharacters",
+    "description": "Saves your character on the server, instead of your computer, to prevent you from messing with it.",
+    "dependencies": []
+}

@@ -1,2 +1,28 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Scripts: always LF
+*.sh text eol=lf
+*.ps1 text eol=crlf
+
+# Config and data files: text
+*.cfg text
+*.json text
+*.txt text
+*.md text
+*.yml text
+*.yaml text
+
+# Binaries - never alter line endings
+*.dll binary
+*.pdb binary
+*.mdb binary
+*.assets binary
+*.bundle binary
+*.unity3d binary
+*.dat binary
+*.bin binary
+*.cache binary
+*.png binary
+*.jpg binary
+*.jpeg binary

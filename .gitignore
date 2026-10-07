@@ -1,0 +1,24 @@
+# OS files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+
+# BepInEx & Unity Logs
+*.log
+LogOutput.log
+Player.log
+Player-prev.log
+
+# Caches and runtime state
+*.cache
+_vanilla_baseline.cache
+*.tmp
+*.bak
+*.old
+
+# Save data and runtime player ledgers
+**/BountySaves/
+*.fch
+*.fwl
+*.db

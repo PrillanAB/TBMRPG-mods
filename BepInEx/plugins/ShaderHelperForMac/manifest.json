@@ -1,0 +1,6 @@
+{
+    "name": "ShaderHelperForMac",
+    "version_number": "3.4.9",
+    "website_url": "https://discord.gg/zUngMHPDsz",
+    "description": "Mod for Apple Silicon (ARM Mac) that automatically improves broken/pink materials caused by mod shaders that were compiled without Metal GPU support.",    "dependencies": []
+}

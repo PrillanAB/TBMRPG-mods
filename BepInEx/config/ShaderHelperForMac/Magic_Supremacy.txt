@@ -1,0 +1,15 @@
+[forcefallback]
+mat:chalice_flame
+mat:chalice_water_do
+mat:chalice_bubbles_DO
+mat:obelisk_water_do
+
+
+[forcetransparent]
+mat:zDoor3
+
+
+[useshader]
+mat:pixel_additive_stormcaller "Legacy Shaders/Particles/Additive" _TintColor=#E8F4FF
+mat:HolderMagicMain "Custom/Creature" _EmissionColor=#000000 #changed intense white to normal
+

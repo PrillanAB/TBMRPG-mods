@@ -1,0 +1,7 @@
+
+[prefab]
+OdinsUndercroft
+OdinsMinicroft
+
+[useshader]
+mat:stonefloor "Custom/Creature"

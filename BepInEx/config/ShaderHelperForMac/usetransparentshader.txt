@@ -1,0 +1,12 @@
+# Materials made transparent (invisible) by ShaderHelperForMac.
+# Three line formats (all case-insensitive, one per line):
+#
+#   DllName              — all unsupported materials from this mod DLL
+#   mat:MaterialName     — one specific material by exact name
+#   suffix:TW            — all materials whose name ends with this suffix
+#
+# Examples:
+# mat:smoke_TW
+# suffix:_vfx
+# DarkWoodFurnitures
+#

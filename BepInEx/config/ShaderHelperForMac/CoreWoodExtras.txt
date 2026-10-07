@@ -1,0 +1,26 @@
+[prefab]
+mm_corewood_crate_herring_fish
+mm_corewood_crate_angler_fish
+# mm_corewood_crate_asksvin_meat    # does not work
+mm_corewood_crate_wolf_meat
+mm_corewood_crate_perch_fish
+mm_corewood_crate_carrot
+mm_corewood_crate_cloudberry
+mm_corewood_crate_hare_meat
+mm_corewood_crate_trollfish
+mm_corewood_crate_tuna_fish
+mm_corewood_crate_turnip
+
+[forcefallback]
+mat:fish1
+mat:fish3
+mat:fish5
+mat:fish6
+mat:fish9
+
+mat:turnip
+mat:carrot
+mat:cloudberry
+mat:WolfMeat
+mat:RabbitMeatUncooked_mat
+

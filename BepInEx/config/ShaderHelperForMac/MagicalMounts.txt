@@ -1,0 +1,129 @@
+# MagicalMounts (CookieMilk) — mount water VFX collision fix + Malbers coat fixes.
+# Requires a game RESTART to take effect (a live sweep leaves vetoed instances stuck).
+
+[prefab]
+fx_mm_deer_water_surface
+fx_mm_dragon_water_surface
+fx_mm_horse_water_surface
+fx_mm_raven_water_surface
+fx_mm_wolf_water_surface
+fx_mm_creature_footstep_water
+fx_mm_creature_land_water
+
+# unicorn rainbow hammer effect roots (block/hit sub-effects host the wave squares)
+fx_mm_unicorn_rainbow_blocked
+fx_mm_unicorn_rainbow_sledge_iron_hit
+mm_unicorn_rainbow
+
+# Hide the unicorn hammer's 'block_wave' particle (FX/waves)
+# Scoped by the [prefab] roots above so vanilla
+# block_wave elsewhere is untouched; a renderer is disabled only if its ancestor is a
+# listed root AND it uses this material. StripInstance matches the " (Instance)" suffix.
+[hiderenderer]
+mat:block_wave
+
+[useshader]
+mat:water_ring    "Legacy Shaders/Particles/Additive"
+mat:water_surface "Legacy Shaders/Particles/Additive"
+
+# ============================================================================
+# MOUNT COATS (Malbers grading not reproducible on Custom/Creature)
+# ----------------------------------------------------------------------------
+# Drive Custom/Creature's OWN grading to approximate each coat:
+#   _Saturation=0        → neutralize the warm/multicolored hide to greyscale
+#   _Color=#RRGGBBAA      → set coat color (multiplied over the greyscale hide)
+#   _Cutoff=0            → force opaque (some coat albedos alpha-clip to transparent)
+#   _Glossiness=0.1      → matte fur (Custom/Creature default 0.5 was too shiny)
+#   _EmissionColor=#…    → deer/wolf only: their T_Deer_Emission / Wolf_FurTattoos
+#                          maps were OFF in source (_EmissionPower=0) but the bridge
+#                          re-enabled them. #000000 killed the pattern entirely, so
+#                          a DIM TAN is used to bring the pattern back subdued.
+# Quoted names REQUIRED (spaces). All values are tunable starting points.
+#
+# --- HORSE ---
+mat:"Horse 4 White"    "Custom/Creature" _Saturation=0 _Color=#DCD4C4FF _Cutoff=0 _Glossiness=0.1   # dimmed
+mat:"Horse 4 Gray 2"   "Custom/Creature" _Saturation=0 _Color=#A8A8A8FF _Cutoff=0 _Glossiness=0.1
+mat:"Horse 4 Black"    "Custom/Creature" _Saturation=0 _Color=#2E2E2EFF _Cutoff=0 _Glossiness=0.1
+mat:"Horse 4 Brown"    "Custom/Creature" _Saturation=0 _Color=#966A3CFF _Cutoff=0 _Glossiness=0.1
+mat:"Horse 4 Palomino" "Custom/Creature" _Saturation=0 _Color=#D8B36BFF _Cutoff=0 _Glossiness=0.1
+
+# --- DEER ---  (emission restored as dim tan so patterns show cream/tan, not white)
+mat:"M_Deer_White"          "Custom/Creature" _Saturation=0 _Color=#CBBC9CFF _Cutoff=0 _Glossiness=0.1 _EmissionColor=#A85A24FF
+mat:"M_Deer_White_Fur"      "Custom/Creature" _Saturation=0 _Color=#CBBC9CFF _Cutoff=0 _Glossiness=0.1 _EmissionColor=#A85A24FF
+mat:"M_Deer_White_Magic"    "Custom/Creature" _Saturation=0 _Color=#CBBC9CFF _Cutoff=0 _Glossiness=0.1 _EmissionColor=#A85A24FF
+mat:"M_Deer_White_Fur_Magic" "Custom/Creature" _Saturation=0 _Color=#CBBC9CFF _Cutoff=0 _Glossiness=0.1 _EmissionColor=#A85A24FF
+mat:"M_Deer_Brown"          "Custom/Creature" _Saturation=0 _Color=#966A3CFF _Cutoff=0 _Glossiness=0.1 _EmissionColor=#A85A24FF
+mat:"M_Deer_Brown_Fur"      "Custom/Creature" _Saturation=0 _Color=#966A3CFF _Cutoff=0 _Glossiness=0.1 _EmissionColor=#A85A24FF
+mat:"M_Deer_Red"            "Custom/Creature" _Saturation=0 _Color=#A85E32FF _Cutoff=0 _Glossiness=0.1 _EmissionColor=#A85A24FF
+mat:"M_Deer_Red_Fur"        "Custom/Creature" _Saturation=0 _Color=#A85E32FF _Cutoff=0 _Glossiness=0.1 _EmissionColor=#A85A24FF
+mat:"M_Deer_Red_Magic"      "Custom/Creature" _Saturation=0 _Color=#A85E32FF _Cutoff=0 _Glossiness=0.1 _EmissionColor=#A85A24FF
+mat:"M_Deer_Red_Fur_Magic"  "Custom/Creature" _Saturation=0 _Color=#A85E32FF _Cutoff=0 _Glossiness=0.1 _EmissionColor=#A85A24FF
+mat:"M_Deer_Black"          "Custom/Creature" _Saturation=0 _Color=#2E2E2EFF _Cutoff=0 _Glossiness=0.1 _EmissionColor=#A85A24FF
+mat:"M_Deer_Black_Fur"      "Custom/Creature" _Saturation=0 _Color=#2E2E2EFF _Cutoff=0 _Glossiness=0.1 _EmissionColor=#A85A24FF
+mat:"M_Deer_Black_Magic"    "Custom/Creature" _Saturation=0 _Color=#2E2E2EFF _Cutoff=0 _Glossiness=0.1 _EmissionColor=#A85A24FF
+mat:"M_Deer_Black_Fur_Magic" "Custom/Creature" _Saturation=0 _Color=#2E2E2EFF _Cutoff=0 _Glossiness=0.1 _EmissionColor=#A85A24FF
+
+# --- WOLF ---
+mat:"Wolf Re White"          "Custom/Creature" _Saturation=0 _Color=#CBBC9CFF _Cutoff=0 _Glossiness=0.1 _EmissionColor=#A85A24FF
+mat:"Wolf Re White Fur"      "Custom/Creature" _Saturation=0 _Color=#CBBC9CFF _Cutoff=0 _Glossiness=0.1 _EmissionColor=#A85A24FF
+mat:"Wolf Re Black"          "Custom/Creature" _Saturation=0 _Color=#2E2E2EFF _Cutoff=0 _Glossiness=0.1 _EmissionColor=#A85A24FF
+mat:"Wolf Re Black Fur"      "Custom/Creature" _Saturation=0 _Color=#2E2E2EFF _Cutoff=0 _Glossiness=0.1 _EmissionColor=#A85A24FF
+mat:"Wolf Re Black Magic"    "Custom/Creature" _Saturation=0 _Color=#2E2E2EFF _Cutoff=0 _Glossiness=0.1 _EmissionColor=#A85A24FF
+mat:"Wolf Re Black Magic Fur" "Custom/Creature" _Saturation=0 _Color=#2E2E2EFF _Cutoff=0 _Glossiness=0.1 _EmissionColor=#A85A24FF
+mat:"Wolf Re Gray Dark"      "Custom/Creature" _Saturation=0 _Color=#6E6E6EFF _Cutoff=0 _Glossiness=0.1 _EmissionColor=#A85A24FF
+mat:"Wolf Re Gray Dark Fur"  "Custom/Creature" _Saturation=0 _Color=#6E6E6EFF _Cutoff=0 _Glossiness=0.1 _EmissionColor=#A85A24FF
+mat:"Wolf Re Timber"         "Custom/Creature" _Saturation=0 _Color=#8A7355FF _Cutoff=0 _Glossiness=0.1 _EmissionColor=#A85A24FF
+mat:"Wolf Re Timber Fur"     "Custom/Creature" _Saturation=0 _Color=#8A7355FF _Cutoff=0 _Glossiness=0.1 _EmissionColor=#A85A24FF
+
+# --- RAVEN ---  (no emission maps on these)
+mat:"Raven White"            "Custom/Creature" _Saturation=0 _Color=#D6CDBAFF _Cutoff=0 _Glossiness=0.1
+mat:"Raven White Fur"        "Custom/Creature" _Saturation=0 _Color=#D6CDBAFF _Cutoff=0 _Glossiness=0.1
+mat:"Raven Black"            "Custom/Creature" _Saturation=0 _Color=#2A2A2AFF _Cutoff=0 _Glossiness=0.1
+mat:"Raven Black Fur"        "Custom/Creature" _Saturation=0 _Color=#2A2A2AFF _Cutoff=0 _Glossiness=0.1
+mat:"Raven Grey"             "Custom/Creature" _Saturation=0 _Color=#8A8A8AFF _Cutoff=0 _Glossiness=0.1
+mat:"Raven Grey Fur"         "Custom/Creature" _Saturation=0 _Color=#8A8A8AFF _Cutoff=0 _Glossiness=0.1
+mat:"Feathers White"         "Custom/Creature" _Saturation=0 _Color=#D6CDBAFF _Cutoff=0 _Glossiness=0.1
+mat:"Feathers Black"         "Custom/Creature" _Saturation=0 _Color=#2A2A2AFF _Cutoff=0 _Glossiness=0.1
+mat:"Wings White"            "Custom/Creature" _Saturation=0 _Color=#D6CDBAFF _Cutoff=0 _Glossiness=0.1
+mat:"Wings Black"            "Custom/Creature" _Saturation=0 _Color=#2A2A2AFF _Cutoff=0 _Glossiness=0.1
+mat:"Wings Feathers White"   "Custom/Creature" _Saturation=0 _Color=#D6CDBAFF _Cutoff=0 _Glossiness=0.1
+mat:"Wings Feathers Black"   "Custom/Creature" _Saturation=0 _Color=#2A2A2AFF _Cutoff=0 _Glossiness=0.1
+
+# --- EYES ---  (were black mirrors — AutoPolishMetallic made them _Metallic=1.
+# A [useshader] rule bypasses that; kill metallic so the iris albedo shows. Keep
+# each eye's own color, no desaturation. No emission — eyes shouldn't glow.)
+mat:"Horse_Eye_D"  "Custom/Creature" _Metallic=0 _UseGlossmap=0 _Glossiness=0.4 _Color=#FFFFFFFF _Cutoff=0 _EmissionColor=#000000FF
+mat:"Horse_Eye_E"  "Custom/Creature" _Metallic=0 _UseGlossmap=0 _Glossiness=0.4 _Color=#FFFFFFFF _Cutoff=0 _EmissionColor=#000000FF
+mat:"Horse_Eye_F"  "Custom/Creature" _Metallic=0 _UseGlossmap=0 _Glossiness=0.4 _Color=#FFFFFFFF _Cutoff=0 _EmissionColor=#000000FF
+mat:"M_Deer_Eyes"  "Custom/Creature" _Metallic=0 _UseGlossmap=0 _Glossiness=0.4 _Color=#FFFFFFFF _Cutoff=0 _EmissionColor=#000000FF
+
+# --- COSMIC COATS (SineVFX GalaxyMaterial) ---
+# The SineVFX galaxy shader is an animated multi-layer effect (rim + rotating stars +
+# clouds + refraction) that Custom/Creature CANNOT reproduce. Tried its star/cloud layers
+# as albedo (flat purple) and as emission (blown-out whiteish) — both dead ends. Settled on
+# a SOLID deep-space color: no texture aliased, so _MainTex stays null → Unity's white
+# default × dark _Color = solid dark indigo. Matte (_Glossiness=0), no emission.
+# Only _01/_06 confirmed loaded; _02–_08 added speculatively for undead/raven/dragon cosmic.
+mat:"GalaxyMaterial_01" "Custom/Creature" _Color=#201C40FF _Cutoff=0 _Glossiness=0
+mat:"GalaxyMaterial_02" "Custom/Creature" _Color=#201C40FF _Cutoff=0 _Glossiness=0
+mat:"GalaxyMaterial_03" "Custom/Creature" _Color=#201C40FF _Cutoff=0 _Glossiness=0
+mat:"GalaxyMaterial_04" "Custom/Creature" _Color=#201C40FF _Cutoff=0 _Glossiness=0
+mat:"GalaxyMaterial_05" "Custom/Creature" _Color=#201C40FF _Cutoff=0 _Glossiness=0
+mat:"GalaxyMaterial_06" "Custom/Creature" _Color=#201C40FF _Cutoff=0 _Glossiness=0
+mat:"GalaxyMaterial_07" "Custom/Creature" _Color=#201C40FF _Cutoff=0 _Glossiness=0
+mat:"GalaxyMaterial_08" "Custom/Creature" _Color=#201C40FF _Cutoff=0 _Glossiness=0
+
+# Left on plain bridge: antlers, horns, saddle, mouth, raven beak,
+# magic eye materials (M_Deer_Eye_Magic_*), "Raven White Spots" (patterned).
+
+# ============================================================================
+# EYE LENS / CORNEA overlays — force transparent.
+# ----------------------------------------------------------------------------
+# These are glassy cornea overlays authored fully transparent (Horse_Lens was
+# Standard with color RGBA(0,0,0,0); Wolf Re EyeLens was MalbersEyeLens). The
+# bridge turned them into OPAQUE BLACK Custom/Creature spheres capping the eye,
+# hiding the iris. Routing them to the transparent shader restores the glassy
+# (effectively invisible) cornea so the eyeball shows through.
+[forcetransparent]
+mat:Horse_Lens
+mat:"Wolf Re EyeLens"

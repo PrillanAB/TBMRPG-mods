@@ -1,0 +1,11 @@
+# Odin's Campsite
+
+[prefab]
+rae_CampsiteBig
+rae_Campsite
+rae_Campsite_MiniPit
+
+[useshader]
+mat:flame2 "Legacy Shaders/Particles/Additive"
+mat:smoke "Legacy Shaders/Particles/Alpha Blended"
+

@@ -1,0 +1,16 @@
+[useshader]
+mat:CBDH0_wheels "Custom/Creature" _EmissionColor=#000000
+mat:CBDH1_wheels "Custom/Creature" _EmissionColor=#000000
+mat:CBDH1_shields "Custom/Creature" _EmissionColor=#000000
+mat:CBDH0e_wheels "Custom/Creature" _EmissionColor=#000000
+mat:CBDH0e_string "Custom/Creature" _EmissionColor=#000000
+mat:CBDH0s_wheels "Custom/Creature" _EmissionColor=#000000
+
+mat:DemonCrossbowDO1 "Custom/Creature" _EmissionColor=#000000
+mat:DemonCrossbowDO2 "Custom/Creature" _EmissionColor=#000000
+
+mat:CrossbowEvoRenegadeDO1 "Custom/Creature" _EmissionColor=#000000 _EMISSION=off
+mat:CrossbowEvoRenegadeDO2 "Custom/Creature" _EmissionColor=#000000 _EMISSION=off
+mat:CrossbowEvoRenegadeDO3 "Custom/Creature" _EmissionColor=#000000 _EMISSION=off
+
+mat:SapphireDO "Custom/Creature" _EmissionColor=#000000

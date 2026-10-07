@@ -1,0 +1,7 @@
+# Mods listed here will be left completely untouched (shaders not changed).
+# Use when a per-mod config defaults the mod to fallback or transparent
+# but you want this specific install left as-is.
+#
+# One DLL name per line (without the .dll extension), case-insensitive.
+# Lines starting with # are comments.
+#

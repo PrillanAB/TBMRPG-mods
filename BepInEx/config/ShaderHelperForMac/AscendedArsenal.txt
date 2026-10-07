@@ -1,0 +1,23 @@
+[forcetransparent]
+mat:M_radial_burst_03
+mat:M_Fire_dissolve_07
+mat:M_Fire_dissolve_08
+mat:M_Burst_directional_03
+
+[useshader]
+mat:M_Wind_02 "Legacy Shaders/Particles/Additive"
+mat:SnowflakeBlue "Legacy Shaders/Particles/Additive"
+mat:GnistaBlue "Legacy Shaders/Particles/Additive"
+mat:PointIce "Legacy Shaders/Particles/Additive"
+mat:PointBlue "Legacy Shaders/Particles/Additive"
+mat:FogRed "Legacy Shaders/Particles/Additive"
+mat:GnistaRed "Legacy Shaders/Particles/Additive"
+mat:GnistaBlack "Legacy Shaders/Particles/Additive"
+mat:M_Ember_01 "Legacy Shaders/Particles/Additive"
+mat:M_Fire_radial_06 "Legacy Shaders/Particles/Additive"
+mat:FogOrange "Legacy Shaders/Particles/Alpha Blended"
+mat:GnistaOrange "Legacy Shaders/Particles/Alpha Blended"
+mat:TrailThickRed "Legacy Shaders/Particles/Additive"
+
+
+

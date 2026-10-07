@@ -1,0 +1,62 @@
+[prefab]
+StormstrikeHammerSecondary_Tornado_TW
+
+[forcefallback]
+mat:TyraniumBlack_mat_TW
+
+[useshader]
+mat:BlackIce_mat_TW Custom/Piece _Color=#000000FF
+mat:wraith_purplesmoke_TW "Legacy Shaders/Particles/Additive"
+mat:dustpurple_TW "Legacy Shaders/Particles/Alpha Blended"
+mat:ashrain_zinder_TW "Legacy Shaders/Particles/Alpha Blended"
+mat:GlowShader_core_TW "Legacy Shaders/Particles/Alpha Blended"
+mat:ThoradusBarDarker_mat_TW "Custom/Creature" _Color=#1FA070FF _EmissionColor=#000000 _UseGlossmap=1 _MetalGloss=0.7 _Glossiness=0.7 _Metallic=1
+mat:TyraniumBar_mat_TW "Custom/Creature" _EmissionColor=#000000 _UseGlossmap=1 _MetalGloss=0.7 _Glossiness=0.7 _Metallic=1
+mat:TyraniumBlack_mat_TW "Custom/Creature" _EmissionColor=#000000 _UseGlossmap=1 _MetalGloss=0.7 _Glossiness=0.7 _Metallic=1
+mat:TyraniumBlack_mat_TW1 "Custom/Creature" _Color=#0A0A0AFF _EmissionColor=#000000 _UseGlossmap=1 _MetalGloss=0.7 _Glossiness=0.7 _Metallic=1
+mat:TyraniumBarDarker_mat_TW "Custom/Creature" _Color=#8C8C8CFF _EmissionColor=#000000 _UseGlossmap=1 _MetalGloss=0.7 _Glossiness=0.7 _Metallic=1
+mat:TyraniumVein_TW "Custom/Creature" _Color=#8C8C8CFF _EmissionColor=#000000
+mat:flamelarge_green_TW1 "Legacy Shaders/Particles/Additive"
+mat:RedMetal_mat_Tyranium "Custom/Creature" _Color=#660000FF _EmissionColor=#000000 _UseGlossmap=1 _MetalGloss=0.7 _Glossiness=0.7 _Metallic=1
+mat:RedMetal_mat_Tyranium1 "Custom/Creature" _Color=#660000FF _EmissionColor=#000000 _UseGlossmap=1 _MetalGloss=0.7 _Glossiness=0.7 _Metallic=1
+mat:block_waveOrangeTW	"Legacy Shaders/Particles/Alpha Blended"
+mat:flame_large_TW "Legacy Shaders/Particles/Alpha Blended"
+mat:flamelarge_TW "Legacy Shaders/Particles/Additive" _TintColor=#FF5400    #from pink to white then to flame color
+mat:flame_fire_TW "Legacy Shaders/Particles/Additive" _TintColor=#FF5400    #from pink to white then to flame color
+mat:DeepNorthcave_mist_TW "Legacy Shaders/Particles/Additive"
+mat:dragon_coldbreath_solid_TW1 "Legacy Shaders/Particles/Additive" # from opaque dome to glowing dissipating energy wave
+mat:LightBlue_mat_Tyranium "Custom/Creature" _Color=#B0E0FFFF _EmissionColor=#000000 _UseGlossmap=1 _MetalGloss=0.7 _Glossiness=0.7 _Metallic=1
+mat:flame_red_TW  "Legacy Shaders/Particles/Additive"
+mat:Tornado     "Legacy Shaders/Particles/Additive"
+mat:Glow        "Legacy Shaders/Particles/Additive"
+mat:workbench_highlight_TW "Legacy Shaders/Particles/Additive"
+mat:"Lava_1_Vertex Color Only" "Custom/Creature" _Color=#FF4500FF _EmissionColor=#FF5400 
+mat:ThoradusBarDarker_mat_TW1 "Custom/Creature" _Color=#8C8C8CFF _EmissionColor=#000000 _UseGlossmap=1 _MetalGloss=0.7 _Glossiness=0.7 _Metallic=1
+mat:"Thunder 3" "Legacy Shaders/Particles/Additive"
+mat:"Spell 2" "Legacy Shaders/Particles/Additive"
+mat:"Spell 3" "Legacy Shaders/Particles/Additive"
+mat:"Spell 4"   "Legacy Shaders/Particles/Additive"
+mat:"Spell 6" "Legacy Shaders/Particles/Additive"
+mat:dust_particleTW "Legacy Shaders/Particles/Additive"
+mat:smoke_dark_TW1 "Legacy Shaders/Particles/Alpha Blended"
+mat:"Ice Lance 2"  "Legacy Shaders/Particles/Additive"
+mat:"Decal 3"  "Legacy Shaders/Particles/Additive"
+mat:"Expansive Wave 2" "Legacy Shaders/Particles/Alpha Blended"
+mat:"Snow 1" "Legacy Shaders/Particles/Additive"
+mat:"Snow 2" "Legacy Shaders/Particles/Additive"
+mat:lightning_mat_TW "Legacy Shaders/Particles/Alpha Blended"
+mat:frostteal_TW "Legacy Shaders/Particles/Alpha Blended"
+mat:GlowSwordEffect_TW "Legacy Shaders/Particles/Additive"
+mat:"Smoke 2" "Legacy Shaders/Particles/Additive"
+mat:Thunder "Legacy Shaders/Particles/Additive"
+mat:Totem "Custom/Creature"
+mat:SapphireDO "Custom/Creature" _EmissionColor=#000000
+mat:SapphireDO1 "Custom/Creature" _EmissionColor=#000000
+mat:FenrirTyraniumArmor_mat_TW "Custom/Creature" _EmissionColor=#000000
+mat:"Lava_2_flow Lake" "Custom/Creature" _Color=#FF4500FF _EmissionColor=#FF5400    # YmirForge lava lake → glowing molten lava
+mat:ArmorFenringLeather_mat_TW "Custom/Creature" _EmissionColor=#000000
+
+[forcetransparent]
+mat:JotunBaneDripSplash_TW
+mat:LightBlue_mat_Tyranium
+

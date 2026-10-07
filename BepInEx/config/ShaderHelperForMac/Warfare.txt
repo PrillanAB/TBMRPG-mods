@@ -1,0 +1,36 @@
+[prefab]
+PropsTable
+CrossbowWood_TW
+
+[forcefallback]
+mat:weapons1                      # fletcher table prop
+mat:Wooddoublesided_mat_TW
+mat:Totem
+
+
+[useshader]
+mat:smoke_TW 		"Legacy Shaders/Particles/Alpha Blended"
+mat:mussle_smoke_TW 	"Legacy Shaders/Particles/Alpha Blended"
+mat:fogTW 		"Legacy Shaders/Particles/Alpha Blended"
+mat:block_waveTW	"Legacy Shaders/Particles/Alpha Blended"
+mat:rocksTW "Custom/Creature" _Color=#6B6259FF  # changed from white cubes to grey
+mat:frost_TW "Legacy Shaders/Particles/Alpha Blended"
+mat:"Spell 1" "Legacy Shaders/Particles/Additive"
+mat:"Spell 5" "Legacy Shaders/Particles/Alpha Blended"
+mat:blood_splatpoisongreen_TW	"Legacy Shaders/Particles/Alpha Blended"
+mat:dust_particle_pixelTW "Legacy Shaders/Particles/Alpha Blended"
+mat:ooze_smoke_TW	"Legacy Shaders/Particles/Additive"
+mat:wraith_purplesmoke_TW "Legacy Shaders/Particles/Additive" _TintColor=#C040FF
+mat:CrudeBow_mat "Custom/Creature" _Color=#9C7B4Eff # fletcher table prop,Crude Crossbow
+mat:bronzedark_mat_TW "Custom/Creature" _EmissionColor=#000000 _UseGlossmap=1 _MetalGloss=0.7 _Glossiness=0.7 _Metallic=1
+mat:bronze_mat_TW "Custom/Creature" _EmissionColor=#000000 _UseGlossmap=1 _MetalGloss=0.7 _Glossiness=0.7 _Metallic=1
+mat:copper_TW "Custom/Creature" _EmissionColor=#000000 _UseGlossmap=1 _MetalGloss=0.7 _Glossiness=0.7 _Metallic=1
+mat:silver_mat_TW "Custom/Creature" _EmissionColor=#000000 _UseGlossmap=1 _MetalGloss=0.7 _Glossiness=0.7 _Metallic=1
+mat:bronze_brighter_mat_TW "Custom/Creature" _EmissionColor=#000000 _UseGlossmap=1 _MetalGloss=0.7 _Glossiness=0.7 _Metallic=1
+mat:reddarkclothborderless_mat_TW3 "Custom/Creature" _EmissionColor=#000000
+mat:"bronzedark_mat_TW29 666" "Custom/Creature" _EmissionColor=#000000
+mat:bronzeaxehead_matTW "Custom/Creature" _EmissionColor=#000000
+
+[forcetransparent]
+mat:demolisher_shockwave_TW
+
