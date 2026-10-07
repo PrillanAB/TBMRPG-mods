@@ -22,3 +22,4 @@ _vanilla_baseline.cache
 *.fch
 *.fwl
 *.db
+BepInEx/cache/
